@@ -1,0 +1,43 @@
+---
+import MenuItems from "../components/Menu-items.astro";
+import Layout from "./Layout.astro";
+
+import { Linkedin, Github, Mail } from "lucide-astro";
+---
+
+<Layout>
+    <section
+        id="sidenav"
+        class="relative hidden h-full w-1/4 flex-col gap-2 md:flex lg:w-1/6"
+    >
+        <div>
+            <a href="/" transition:name="hero">
+                <h1 class="pb-2 text-3xl">Bruno García Baldassari</h1>
+                <h2 class="pb-2 text-lg">Web developer</h2>
+            </a>
+            <svg width="65%" height="2">
+                <line
+                    x1="0"
+                    y1="0"
+                    x2="100%"
+                    y2="0"
+                    style="stroke:rgb(255, 255, 255);stroke-width:2"></line>
+            </svg>
+        </div>
+
+        <ul class="pt-5 text-xl">
+            <MenuItems />
+        </ul>
+
+        <div class="absolute bottom-0 flex gap-2">
+            <Linkedin class="h-8 w-8" />
+            <Github class="h-8 w-8" />
+            <Mail class="h-8 w-8" />
+        </div>
+    </section>
+    <section
+        class="prose-lg relative w-4/6 overflow-hidden prose-p:my-2 prose-li:my-1.5"
+    >
+        <slot />
+    </section>
+</Layout>

@@ -1,0 +1,60 @@
+---
+import Image from "astro/components/Image.astro";
+import Sidenav from "../../layouts/Sidenav.astro";
+import flows_shopify from "../../assets/Flows-Shopify.png";
+import { CircleArrowDown } from "lucide-astro";
+---
+
+<Sidenav>
+    <div
+        class="fixed inset-0 -z-10 bg-gradient-to-br from-zinc-800/20 to-green-800/20"
+    >
+    </div>
+
+    <article>
+        <h1 class="text-5xl">1. Netsuite &lt;-&gt; Shopify integration</h1>
+        <p>
+            NetSuite is one of the most used ERP software in the world and
+            Shopify is one of the most used E-commerce platform in the world.
+        </p>
+        <p>
+            The overlap was clear to us, many companies would or aspire to use
+            both services to scale their business operations to the next level.
+        </p>
+        <p>
+            Leveraging our expert knowledge about the NetSuite platform and the
+            Shopify API layer, we were able to implement a robust and seamless
+            integration, enabling to...
+        </p>
+        <div class="flex flex-col lg:flex-row lg:justify-between">
+            <ul class="list-disc">
+                <li>Sync product information</li>
+                <li>Update item's stock</li>
+                <li>Manage orders</li>
+                <li>Add fulfillment data</li>
+                <li>Get financial insights through custom dasboards</li>
+                <li>And more</li>
+            </ul>
+            <Image
+                src={flows_shopify}
+                alt="Shopify integration flows diagram"
+                class="max-h-64 w-auto lg:max-w-[50%]"
+            />
+        </div>
+        <p>
+            All running natively in NetSuite which enabled the customer to avoid
+            expensive middleware platforms and keeeping the customer data
+            protected on the platform.
+        </p>
+    </article>
+
+    <div class="absolute bottom-0 right-0">
+        <a
+            href="/portfolio/chore-tracker"
+            class="flex items-center gap-3 text-2xl"
+        >
+            2. Chore tracker
+            <CircleArrowDown class="animate-bounce" />
+        </a>
+    </div>
+</Sidenav>

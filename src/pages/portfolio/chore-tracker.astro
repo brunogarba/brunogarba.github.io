@@ -1,0 +1,46 @@
+---
+import Sidenav from "../../layouts/Sidenav.astro";
+import Chore_tracker_demo from "../../assets/Chore-tracker-demo.mp4";
+import { CircleArrowDown, CircleArrowUp } from "lucide-astro";
+---
+
+<Sidenav>
+    <div
+        class="fixed inset-0 -z-10 bg-gradient-to-br from-zinc-800/20 to-white/20"
+    >
+    </div>
+
+    <h1 class="text-5xl">2. Chore tracker</h1>
+
+    <div class="flex h-full gap-5 lg:gap-10">
+        <div>
+            <p>
+                After trying a bunch of options and not quite finding something
+                that fit our needs, I decided to create an app to keep track of
+                some of the recurring house chores that we tend to forget about
+                due to their occasional nature. It also made for a good canvas
+                to try new technologies and app architecture ideas.
+            </p>
+
+            <p>
+                Built as a PWA (Progressive Web App) for mobile devices, I
+                prioritized a good User Experience with collapsible menus and
+                the ability to see the status of a task at a glance.
+            </p>
+
+            <p>
+                The app is in continuous development and I'm planning to add
+                features as user authentication for isolating their own chores,
+                push notification reminders, and cloud hosting for
+                always-available operation.
+            </p>
+
+            <p>
+                Technologies used: React, Astro, Tailwind, Shadcn, SQLite,
+                Vitest, Zod, Vercel
+            </p>
+        </div>
+
+        <video src={Chore_tracker_demo} class="h-3/4" autoplay></video>
+    </div>
+</Sidenav>

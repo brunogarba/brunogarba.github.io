@@ -1,0 +1,39 @@
+---
+import Sidenav from "../layouts/Sidenav.astro";
+---
+
+<Sidenav>
+    <div
+        class="fixed inset-0 -z-10 bg-gradient-to-br from-zinc-800/20 to-amber-800/20"
+    >
+    </div>
+    <div class="mx-10 flex h-full flex-col justify-center">
+        <h1 class="text-5xl">Contact Me</h1>
+        <p class="pb-10 text-2xl">
+            If you have any questions or opportunities you'd like to discuss
+            don't hesitate to contact me.
+        </p>
+        <form action="" class="flex h-full flex-col">
+            <label for="name">Name *</label>
+            <input
+                type="text"
+                class="mb-6 w-2/5 rounded-lg bg-neutral-500/50 px-2"
+                required
+            />
+
+            <label for="email">Email Address *</label>
+            <input
+                type="email"
+                class="mb-6 w-3/5 rounded-lg bg-neutral-500/50 px-2"
+                required
+            />
+
+            <label for="message">Message *</label>
+            <textarea
+                rows="6"
+                id="message"
+                class="mb-6 rounded-lg bg-neutral-500/50 px-2"
+                required></textarea>
+        </form>
+    </div>
+</Sidenav>

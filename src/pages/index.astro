@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MenuItems from "../components/Menu-items.astro";
+import { Image } from "astro:assets";
+import profile_pic from "../assets/Profile-pic.jpg";
+---
+
+<Layout>
+    <div
+        class="absolute inset-0 -z-10 bg-gradient-to-br from-zinc-800/20 to-teal-800/20"
+    >
+    </div>
+    <section
+        transition:name="hero"
+        id="hero"
+        class="flex h-full w-1/2 flex-col justify-center gap-4"
+    >
+        <Image
+            src={profile_pic}
+            alt="Profile Picture"
+            height="250"
+            width="250"
+            class="rounded-full"
+        />
+        <h1 class="text-7xl">Bruno García Baldassari</h1>
+        <h2 class="text-3xl">Web developer</h2>
+    </section>
+    <section id="menu" class="flex h-full w-1/2 flex-col justify-center">
+        <ul class="border-l-2 pl-4 text-2xl">
+            <MenuItems />
+        </ul>
+    </section>
+</Layout>
